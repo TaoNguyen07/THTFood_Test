@@ -1,0 +1,34 @@
+package DriverManager;
+
+import java.sql.Driver;
+
+public class DriverManagerFactory {
+	
+	public static DriverManager getDriverManager(DriverType type) {
+		DriverManager drivermanager;
+		
+		switch (type) {
+		case CHROME:
+			drivermanager = new ChromeDriverManager();
+			break;
+			
+		case FIREFOX:
+			drivermanager = new FirefoxDriverManager();
+			break;
+
+		default:
+			drivermanager = new EdgeDriverManager();
+			break;
+		}
+		
+		return drivermanager;
+		
+	}
+	
+	public enum DriverType{
+		CHROME, FIREFOX, IE;
+	}
+
+}
+
+

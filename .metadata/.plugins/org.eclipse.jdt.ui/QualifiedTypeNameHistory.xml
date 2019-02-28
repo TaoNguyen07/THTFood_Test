@@ -1,2 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeOptions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxOptions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeOptions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.edge.EdgeDriver"/>
+<fullyQualifiedTypeName name="java.sql.Driver"/>
+<fullyQualifiedTypeName name="DriverManager.FirefoxDriverManager"/>
+<fullyQualifiedTypeName name="DriverManager.EdgeDriverManager"/>
+<fullyQualifiedTypeName name="DriverManager.ChromeDriverManager"/>
+<fullyQualifiedTypeName name="DriverManager.DriverManager"/>
+<fullyQualifiedTypeName name="org.testng.TestNG"/>
+<fullyQualifiedTypeName name="org.testng.annotations.Test"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
+<fullyQualifiedTypeName name="DriverManager.DriverManagerFactory"/>
+<fullyQualifiedTypeName name="DriverManager.DriverManagerFactory.DriverType"/>
+<fullyQualifiedTypeName name="java.lang.AssertionError"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.testng.Assert"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="drivermanager.SafariDriverManger"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.safari.SafariOptions"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.safari.SafariDriver"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="org.junit.Before"/>
+<fullyQualifiedTypeName name="org.junit.BeforeClass"/>
+<fullyQualifiedTypeName name="drivermanager.DriverManager"/>
+<fullyQualifiedTypeName name="drivermanager.DriverManagerFactory"/>
+<fullyQualifiedTypeName name="drivermanager.DriverManagerFactory.DriverType"/>
+<fullyQualifiedTypeName name="functisonal.LoginPage"/>
+</qualifiedTypeNameHistroy>

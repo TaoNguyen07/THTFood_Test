@@ -1,0 +1,23 @@
+
+package Functional;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.TestNG;
+
+import DriverManager.DriverManager;
+import DriverManager.DriverManagerFactory;
+import DriverManager.DriverManagerFactory.DriverType;
+
+public class Tests {
+	
+	DriverManager driverManager;
+	WebDriver driver;
+	
+    @Test
+    public void navigateGoogleTest() {
+    	driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
+    	System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver_win32\\chromedriver.exe");
+    }
+
+}

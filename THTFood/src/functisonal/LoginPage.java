@@ -1,0 +1,36 @@
+package functisonal;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+	WebDriver driver;
+	
+	public LoginPage( WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	private By userNameTXT = By.xpath("//form//input[@name='username']");
+	private By passwordTXT = By.xpath("//form//input[@name='password']");
+	private By loginBTN = By.xpath("//form/div//button[@type='submit']");
+	
+	public void login(String username, String password) {
+		this.setUserName(username);
+		this.setPassword(password);
+		this.clickLogin();
+	}
+
+
+	public void setUserName(String userName) {
+		driver.findElement(this.userNameTXT).sendKeys(userName);
+	}
+
+
+	public void setPassword(String password) {
+		driver.findElement(this.passwordTXT).sendKeys(password);
+	}
+	
+	private void clickLogin() {
+		driver.findElement(loginBTN).click();
+	}
+}

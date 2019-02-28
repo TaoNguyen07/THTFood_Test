@@ -1,0 +1,28 @@
+
+package drivermanager;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+
+import drivermanager.DriverManager;
+import drivermanager.DriverManagerFactory;
+
+public class Tests {
+	
+	DriverManager driverManager;
+	WebDriver driver;
+	
+    @Test
+    public void navigateGoogleTest() {
+    	driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
+    	driver = driverManager.getWebDriver();
+    	driver.get("https://www.google.com");
+    	Assert.assertEquals("Google",driver.getTitle());
+    	
+    }
+
+}
+
+
+//System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver_win32\\chromedriver.exe");

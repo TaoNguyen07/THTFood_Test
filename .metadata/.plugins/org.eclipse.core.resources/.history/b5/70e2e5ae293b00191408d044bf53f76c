@@ -1,0 +1,20 @@
+
+package Functional;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.TestNG;
+
+import DriverManager.DriverManager;
+
+public class Tests {
+	
+	DriverManager driverManager;
+	WebDriver driver;
+	
+    @Test
+    public void navigateGoogleTest() {
+    	
+    }
+
+}

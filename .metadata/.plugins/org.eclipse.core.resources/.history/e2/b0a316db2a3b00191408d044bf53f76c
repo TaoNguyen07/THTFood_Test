@@ -1,0 +1,28 @@
+
+package Functional;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.TestNG;
+
+import DriverManager.DriverManager;
+import DriverManager.DriverManagerFactory;
+import DriverManager.DriverManagerFactory.DriverType;
+//import junit.framework.Assert;
+
+public class Tests {
+	
+	DriverManager driverManager;
+	WebDriver driver;
+	
+    @Test
+    public void navigateGoogleTest() {
+    	driverManager = DriverManagerFactory.getDriverManager(DriverType.CHROME);
+    	driver = driverManager.getWebDriver();
+    	System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver_win32\\chromedriver.exe");
+    	Assert.assertEquals("Google",driver.getTitle());
+    	
+    }
+
+}
