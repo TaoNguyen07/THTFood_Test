@@ -1,0 +1,111 @@
+package functisonal;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import drivermanager.SetUpDriver;
+
+public class LoginAdminPage {
+//	static WebDriver driver;
+//	
+//	private static By userNameTXT = By.xpath("//form//input[@name='username']");
+//	private static By passwordTXT = By.xpath("//form//input[@name='password']");
+//	private static By loginBTN = By.xpath("//form/div//button[@type='submit']");
+//	
+//	public static void login(String username, String password) {
+//		setUserName(username);
+//		setPassword(password);
+//		clickLogin();
+//	}
+//
+//
+//	public static void setUserName(String userName) {
+//		driver.findElement(userNameTXT).sendKeys(userName);
+//	}
+//
+//
+//	public static void setPassword(String password) {
+//		driver.findElement(passwordTXT).sendKeys(password);
+//	}
+//	
+//	private static void clickLogin() {
+//		driver.findElement(loginBTN).click();
+//	}
+//	
+//	public static void main(String[] args) {
+//		SetUpDriver.iNit();
+//		driver.get("http://127.0.0.1:8000/admin/auth/login");
+//		driver.manage().window().maximize();
+//		login("admin", "admin");
+//	}
+	
+	static String emailRandom, email;
+	static WebDriver driver;
+	
+//	Create an instance of the driver
+	public static void init() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\chromedriver_win32\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+	
+//	Navigate to a Railway and Maximize the browser
+	public static void NavigateRailway() {			
+		driver.get("http://127.0.0.1:8000/admin/auth/login");
+		driver.manage().window().maximize();
+	}
+	
+
+	
+//  Register	
+	public static void Login(String username, String password) {
+	    driver.findElement(By.xpath("//form//input[@name='username'")).sendKeys(username);
+	    driver.findElement(By.xpath("//form//input[@name='password'")).sendKeys(password);
+
+	    driver.findElement(By.xpath("//form/div//button[@type='submit']")).click();
+	    
+//	    if(existsElement(By.xpath("//div[@id='content']/h1[text()='Thank you for registering your account']"))==true) {
+//	    	System.out.println("successfully");
+//	    }
+//	    else {
+//	    	System.out.println("failed");
+//	    }
+   
+	}
+	
+//	public static boolean existsElement(By by) {
+//	    try {
+//	        driver.findElement(by);
+//	    } catch (NoSuchElementException e) {
+//	        return false;
+//	    }
+//	    return true;
+//	}
+	
+	
+//	public static String getEmail() {
+//		emailRandom = RandomEmail.getEmailRandom(); 
+//		return email;
+//	}
+	
+	
+//	public static String setUpEmail() {
+//		CreateEmailSharklaser.initSharklaser();
+//		CreateEmailSharklaser.NavigateSharklaser();
+//		String emailSetUp = "0";
+////		String emailSetUp = CreateEmailSharklaser.randomEmail();
+////		CreateEmailSharklaser.SetEmail(emailSetUp);
+////		System.out.println(emailSetUp);
+//		return emailSetUp;
+//	}
+	
+	
+	public static void main(String[] args) {
+//		email = setUpEmail()+("@sharklasers.com");
+		init();
+		NavigateRailway();
+//		GoToPage();
+		Login("admin", "admin);
+//		CreateEmailSharklaser.ConfrimEmail();
+	}
+}

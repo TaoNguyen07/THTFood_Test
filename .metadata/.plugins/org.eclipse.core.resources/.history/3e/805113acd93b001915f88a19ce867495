@@ -1,0 +1,39 @@
+package functisonal;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import drivermanager.SetUpDriver;
+
+public class LoginAdminPage {
+	static WebDriver driver;
+	
+	private static By userNameTXT = By.xpath("//form//input[@name='username']");
+	private static By passwordTXT = By.xpath("//form//input[@name='password']");
+	private static By loginBTN = By.xpath("//form/div//button[@type='submit']");
+	
+	public static void login(String username, String password) {
+		setUserName(username);
+		setPassword(password);
+		clickLogin();
+	}
+
+
+	public static void setUserName(String userName) {
+		driver.findElement(userNameTXT).sendKeys(userName);
+	}
+
+
+	public static void setPassword(String password) {
+		driver.findElement(passwordTXT).sendKeys(password);
+	}
+	
+	private static void clickLogin() {
+		driver.findElement(loginBTN).click();
+	}
+	
+	public static void main(String[] args) {
+		SetUpDriver.iNit();
+		login("admin", "admin");
+	}
+}

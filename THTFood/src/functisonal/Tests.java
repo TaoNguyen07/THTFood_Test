@@ -6,27 +6,24 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-import drivermanager.DriverManager;
-import drivermanager.DriverManagerFactory;
-import drivermanager.DriverManagerFactory.DriverType;
+import drivermanager.SetUpDriver;
+import functisonal.LoginAdminPage;
 
 public class Tests {
 	
-	DriverManager driverManager;
 	WebDriver driver;
-	LoginPage loginPage;
+	LoginAdminPage loginPage;
 	
 	@BeforeClass
 	public void setUp() {
-		driverManager =DriverManagerFactory.getDriverManager(DriverType.CHROME);
-		driver = driverManager.getWebDriver();
+		SetUpDriver.iNit();
 		driver.get("http://127.0.0.1:8000/admin/auth/login");
+		driver.manage().window().maximize();
 	}
 	
 	@Test
 	public void loginTest() {
-		loginPage = new LoginPage(driver); 
-		loginPage.login("admin", "admin");
+		LoginAdminPage.login("admin", "admin");
 		Assert.assertEquals("Admin  | Dashboard", driver.getTitle());
 	}
 	

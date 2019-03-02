@@ -1,0 +1,8 @@
+package functisonal;
+
+import org.openqa.selenium.WebDriver;
+
+public class LoginAdminPage {
+	WebDriver driver;
+	
+}
